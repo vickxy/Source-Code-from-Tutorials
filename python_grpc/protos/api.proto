@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package satnux.grpc.api;
+
+service Api{
+    rpc ApiEndpoint(ApiRequest)  returns (ApiResponse);
+}
+
+message ApiRequest{
+	// User name to receive greeting
+	string userName = 1;
+}
+
+message ApiResponse{
+	// Server stub response
+	string resp = 1;
+}
